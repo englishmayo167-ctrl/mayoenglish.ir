@@ -1,0 +1,380 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #222;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+header {
+    background-color: #123b6d;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 25px 0;
+    font-size: 32px;
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #d4a017;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    background-color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    color: #123b6d;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #555;
+    font-size: 19px;
+    margin-bottom: 30px;
+    line-height: 2;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+    background-color: #d4a017;
+    color: white;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #b88900;
+}
+
+
+/* =========================
+   Courses
+========================= */
+
+.courses {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.courses > h2 {
+    color: #123b6d;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+
+/* کارت‌ها */
+
+.course-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* هر دوره */
+
+.course {
+    width: 280px;
+    min-height: 250px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: 0.3s;
+}
+
+.course:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.course h3 {
+    color: #123b6d;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.course p {
+    color: #666;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    background-color: #123b6d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .course {
+        width: 100%;
+        max-width: 350px;
+    }
+
+}
+.moving-text {
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: moveText 8s linear infinite;
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/* =========================
+   Login
+========================= */
+
+.login-box {
+    margin-top: 20px;
+}
+
+.login-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.login-content {
+    position: relative;
+    width: 90%;
+    max-width: 420px;
+
+    background-color: white;
+    padding: 35px;
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.login-content h2 {
+    color: #123b6d;
+    margin-bottom: 10px;
+}
+
+.login-content p {
+    color: #666;
+    line-height: 1.8;
+}
+
+.close-login {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+
+    font-size: 32px;
+    color: #777;
+
+    cursor: pointer;
+}
+
+.close-login:hover {
+    color: #123b6d;
+}
+
+.login-content input {
+    width: 100%;
+    padding: 13px;
+
+    margin: 8px 0;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-family: Tahoma;
+    font-size: 15px;
+}
+
+.login-content button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.google-button {
+    background-color: white;
+    color: #333;
+
+    border: 1px solid #ccc;
+}
+
+.google-button:hover {
+    background-color: #f5f5f5;
+}
+
+.login-line {
+    margin: 20px 0;
+    color: #999;
+}
+
+#loginMessage {
+    margin-top: 15px;
+    color: #123b6d;
+    font-weight: bold;
+}
+/* =========================
+   Survey
+========================= */
+
+.survey {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px 25px;
+
+    background-color: white;
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+.survey h2 {
+    color: #123b6d;
+    font-size: 30px;
+}
+
+.survey p {
+    color: #555;
+    line-height: 2;
+}
+
+.survey-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+.survey-options label {
+    padding: 12px 18px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.survey-options label:hover {
+    border-color: #d4a017;
+    background-color: #fffaf0;
+}
+
+.survey-options input {
+    margin-left: 6px;
+}
+
+#surveyMessage {
+    color: #123b6d;
+    font-weight: bold;
+    margin-top: 20px;
+}
